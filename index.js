@@ -22,7 +22,6 @@ const getCurrency = async (code) => {
     setTimeout(() => {
       loader.classList.add("hidden");
     }, 400);
-    console.log("Done");
   }
 };
 
@@ -37,7 +36,13 @@ const main = async () => {
 };
 
 select.addEventListener("change", (event) => {
-  choosenCurrency = event.target.value;
+  if (
+    event.target.value === "eur" ||
+    event.target.value === "usd" ||
+    event.target.value === "chf"
+  ) {
+    choosenCurrency = event.target.value;
+  }
 });
 
 button.addEventListener("click", () => {
