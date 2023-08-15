@@ -18,7 +18,6 @@ const getCurrency = async (code) => {
     return ask;
   } catch (error) {
     console.error(error);
-    alert("Wybierz walutę");
   } finally {
     setTimeout(() => {
       loader.classList.add("hidden");
