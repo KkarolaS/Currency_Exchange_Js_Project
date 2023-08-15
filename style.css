@@ -1,0 +1,155 @@
+/* https://colorhunt.co/palette/ebe76cf0b86eed7b7b836096*/
+/* For colors used: https://colornamer.robertcooper.me/*/
+
+:root {
+  --limelight: #ebe76c;
+  --olden-amber: #f0b86e;
+  --siesta-rose: #ed7b7b;
+  --wisteria-purple: #836096;
+  --obsidian-shell: #410e5c;
+}
+
+body {
+  background-color: var(--limelight);
+}
+
+.page-container {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 991px;
+  height: 100vh;
+  padding: 20px 40px;
+  margin: 0 auto;
+  color: var(--obsidian-shell);
+}
+
+.app-header {
+  height: 200px;
+  display: flex;
+  gap: 30px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--limelight);
+  background-color: var(--wisteria-purple);
+  border: 2px solid var(--siesta-rose);
+  border-radius: 50px;
+}
+
+.header-text-wrapper {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header-title {
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.header-subtitle {
+  font-size: 21px;
+  font-weight: 200;
+}
+
+.currency-options-conatiner {
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 5px solid var(--wisteria-purple);
+  background-color: var(--olden-amber);
+  border-radius: 10px;
+}
+
+.input-wrapper {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-amount {
+  height: 38px;
+  padding-left: 15px;
+}
+
+.input-amount,
+.exchange-btn {
+  height: 38px;
+  border-radius: 20px;
+  color: rgb(33, 20, 80);
+  border-color: white;
+  background-color: var(--limelight);
+}
+.currencies-options {
+  height: 38px;
+  border-color: white;
+  background-color: var(--limelight);
+  cursor: pointer;
+}
+.exchange-btn {
+  border-color: var(--obsidian-shell);
+  background-color: var(--wisteria-purple);
+  color: white;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 200;
+  margin: 0;
+}
+
+.text-amount {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.loader-wrapper {
+  width: 130px;
+  height: 38px;
+  display: flex;
+  justify-content: start;
+}
+
+.btn {
+  width: 130px;
+  height: 38px;
+}
+
+.app-footer {
+  margin-top: 50px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.company-name {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.fb-insta-logo-container {
+  height: 60px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icon-btn {
+  background-color: var(--siesta-rose);
+  color: var(--obsidian-shell);
+  border-radius: 50%;
+  width: 60px;
+  border: none;
+}

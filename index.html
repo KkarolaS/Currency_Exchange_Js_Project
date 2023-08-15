@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Exchange</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="app-header">
+        <div class="logo">
+          <i class="fa-solid fa-hand-holding-dollar fa-2xl"></i>
+        </div>
+        <div class="header-text-wrapper">
+          <h1 class="header-title">Currency Exchange App</h1>
+          <h3 class="header-subtitle">check currencies with us</h3>
+        </div>
+      </header>
+
+      <section class="currency-options-conatiner">
+        <div class="input-wrapper">
+          <input type="number" class="input-amount" id="input-amount" />
+          <select
+            name="currencies"
+            class="currencies-options"
+            id="currencies-options"
+          >
+            <option value="none" id="choose">Wybierz</option>
+            <option value="eur" id="option">EUR</option>
+            <option value="usd" id="option">USD</option>
+            <option value="chf" id="option">CHF</option>
+          </select>
+          <button id="getCurrencies-btn" class="exchange-btn">Przelicz</button>
+
+          <p class="text">to</p>
+          <p id="currency-value" data-test="currency-value" class="text-amount">
+            0 PLN
+          </p>
+          <div class="loader-wrapper">
+            <button
+              id="loader"
+              class="btn btn-danger hidden"
+              type="button"
+              disabled
+            >
+              <span
+                class="spinner-border spinner-border-sm"
+                aria-hidden="true"
+              ></span>
+              <span role="status">Loading...</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="app-footer">
+        <p class="company-name">Exchange With Us Company Sp. z o.o. ©</p>
+        <div class="fb-insta-logo-container">
+          <button class="footer-icon-btn">
+            <i class="fa-brands fa-facebook-f fa-xl"></i>
+          </button>
+          <button class="footer-icon-btn">
+            <i class="fa-brands fa-instagram fa-xl"></i>
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" charset="UTF-8" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/3da08e9c43.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
