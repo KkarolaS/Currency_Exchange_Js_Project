@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,41 +25,45 @@
         </div>
       </header>
 
-      <section class="currency-options-conatiner">
+      <main class="currency-options-conatiner">
         <div class="input-wrapper">
+        <form class="form-wrapper" id="form-input">
           <input type="number" class="input-amount" id="input-amount" />
           <select
             name="currencies"
             class="currencies-options"
             id="currencies-options"
           >
-            <option value="none" id="choose">Wybierz</option>
-            <option value="eur" id="option">EUR</option>
-            <option value="usd" id="option">USD</option>
-            <option value="chf" id="option">CHF</option>
+            <option value="choose" id="choose">Wybierz</option>
+            <option value="eur">EUR</option>
+            <option value="usd" >USD</option>
+            <option value="chf" >CHF</option>
           </select>
-          <button id="getCurrencies-btn" class="exchange-btn">Przelicz</button>
-
-          <p class="text">to</p>
-          <p id="currency-value" data-test="currency-value" class="text-amount">
-            0 PLN
-          </p>
-          <div class="loader-wrapper">
-            <button
-              id="loader"
-              class="btn btn-danger hidden"
-              type="button"
-              disabled
-            >
-              <span
-                class="spinner-border spinner-border-sm"
-                aria-hidden="true"
-              ></span>
-              <span role="status">Loading...</span>
-            </button>
-          </div>
+          <input type="submit" class="exchange-btn" value="Przelicz"></input>
+        </form>
+        <p class="text">to</p>
+        <p id="currency-value" data-test="currency-value" class="text-amount">
+          0 PLN
+        </p>
+        <div class="loader-wrapper">
+          <button
+            id="loader"
+            class="btn btn-danger hidden"
+            type="button"
+            disabled
+          >
+            <span
+              class="spinner-border spinner-border-sm"
+              aria-hidden="true"
+            ></span>
+            <span role="status"></span>
+          </button>
         </div>
-      </section>
+      </div>
+        <section class="error-wrapper">
+          <p class="error-info" id="error-info"></p>
+        </section>
+      </main>
 
       <footer class="app-footer">
         <p class="company-name">Exchange With Us Company Sp. z o.o. ©</p>

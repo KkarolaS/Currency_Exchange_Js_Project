@@ -59,8 +59,10 @@ body {
 }
 
 .currency-options-conatiner {
-  height: 150px;
+  height: 200px;
+  padding: 20px 10px;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   border-bottom: 5px solid var(--wisteria-purple);
@@ -107,6 +109,7 @@ body {
 }
 
 .text-amount {
+  min-width: 150px;
   font-size: 24px;
   font-weight: 900;
   margin: 0;
@@ -117,7 +120,7 @@ body {
 }
 
 .loader-wrapper {
-  width: 130px;
+  width: 38px;
   height: 38px;
   display: flex;
   justify-content: start;
@@ -128,8 +131,18 @@ body {
   height: 38px;
 }
 
+.error-wrapper {
+  align-self: flex-start;
+  margin-left: 90px;
+}
+.error-info {
+  color: rgb(253, 8, 8);
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .app-footer {
-  margin-top: 50px;
+  margin-top: 20px;
   height: 150px;
   display: flex;
   justify-content: space-between;
