@@ -26,43 +26,47 @@
       </header>
 
       <main class="currency-options-conatiner">
-        <div class="input-wrapper">
-        <form class="form-wrapper" id="form-input">
-          <input type="number" class="input-amount" id="input-amount" />
-          <select
-            name="currencies"
-            class="currencies-options"
-            id="currencies-options"
-          >
-            <option value="choose" id="choose">Wybierz</option>
-            <option value="eur">EUR</option>
-            <option value="usd" >USD</option>
-            <option value="chf" >CHF</option>
-          </select>
-          <input type="submit" class="exchange-btn" value="Przelicz"></input>
-        </form>
-        <p class="text">to</p>
-        <p id="currency-value" data-test="currency-value" class="text-amount">
-          0 PLN
-        </p>
-        <div class="loader-wrapper">
-          <button
-            id="loader"
-            class="btn btn-danger hidden"
-            type="button"
-            disabled
-          >
-            <span
-              class="spinner-border spinner-border-sm"
-              aria-hidden="true"
-            ></span>
-            <span role="status"></span>
-          </button>
-        </div>
-      </div>
         <section class="error-wrapper">
           <p class="error-info" id="error-info"></p>
         </section>
+        <div class="input-wrapper">
+          <form class="form-wrapper" id="form-input">
+            <input type="number" class="input-amount" id="input-amount" />
+            <div class="currencies-options">
+              <select
+                name="currencies"
+                class="select-options"
+                id="currencies-options"
+              >
+                <option class="option" value="choose" id="choose">
+                  Wybierz
+                </option>
+                <option class="option" value="eur">EUR</option>
+                <option class="option" value="usd">USD</option>
+                <option class="option" value="chf">CHF</option>
+              </select>
+            </div>
+            <input type="submit" class="exchange-btn" value="Przelicz" />
+          </form>
+          <p class="text">to</p>
+          <p id="currency-value" data-test="currency-value" class="text-amount">
+            0 PLN
+          </p>
+          <div class="loader-wrapper">
+            <button
+              id="loader"
+              class="btn btn-danger hidden"
+              type="button"
+              disabled
+            >
+              <span
+                class="spinner-border spinner-border-sm"
+                aria-hidden="true"
+              ></span>
+              <span role="status"></span>
+            </button>
+          </div>
+        </div>
       </main>
 
       <footer class="app-footer">
