@@ -10,12 +10,9 @@ const getCurrency = async () => {
   try {
     loader.classList.remove("hidden");
     const response = await axios.get(
-      `http://api.nbp.pl/api/exchangerates/rates/c/${select.value}/?format=json`
+      `https://api.nbp.pl/api/exchangerates/rates/c/${select.value}/?format=json`
     );
-    const {
-      data: { rates },
-    } = response;
-    const { ask } = rates[0];
+    const ask = response.data?.rates?.[0]?.ask;
     return ask;
   } catch (error) {
     errorInfo.textContent = "Błąd serwera. Spróbuj ponownie później";
@@ -42,17 +39,15 @@ const main = async () => {
 };
 
 formElm.addEventListener("submit", (event) => {
+  event.preventDefault();
   if (input.value && select.value !== "choose") {
     if (input.value > 0) {
       errorInfo.textContent = "";
       main();
-      event.preventDefault();
     } else {
       errorInfo.textContent = "Kwota powinna być większa niż 0!";
-      event.preventDefault();
     }
   } else {
     errorInfo.textContent = "Podaj wartość i wybierz walutę!";
-    event.preventDefault();
   }
 });
